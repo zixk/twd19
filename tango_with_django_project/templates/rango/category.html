@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Rango</title>
+    <title>Rango - Category</title>
 </head>
 <body>
     <div>
@@ -20,8 +20,12 @@
             The specifies category does not exist!
         {% endif %}
     </div>
-<a href="/rango/">Rango Index</a>
-
+    <div>
+    {% if category %}
+        <a href="/rango/category/{{category.slug}}/add_page/">Add Page</a> <br/>
+    {% endif %}
+    <a href="/rango/">Rango Index</a>
+    </div>
 
 </body>
 </html>
