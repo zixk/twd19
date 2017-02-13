@@ -1,0 +1,16 @@
+<ul>
+    {% if cats %}
+        {% for c in cats %}
+            {% if c == act_cat %}
+                <li>
+                    <stong><a href="{% url 'show_category' c.slug %}">{{ c.name }}</a></stong>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{% url 'show_category' c.slug %}">{{ c.name }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+</ul>
