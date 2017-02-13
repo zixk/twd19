@@ -19,7 +19,9 @@
             {% else %}
                 <stong>No pages currently in category.</stong>
             {% endif %}
+            {% if user.is_authenticated %}
             <a href="{% url 'add_page' category.slug %}">Add a Page</a>
+            {% endif %}
         {% else %}
             The specifies category does not exist!
         {% endif %}
